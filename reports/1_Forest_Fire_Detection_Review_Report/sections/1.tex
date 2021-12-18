@@ -1,0 +1,122 @@
+\section{A review of machine learning applications in wildfire science and
+management}
+
+%1
+\begin{frame}
+    \frametitle{\textit{A review of machine learning applications in wildfire
+    science and management} ~~------~~ Overview}
+    \begin{columns}[t]
+        \column{0.45\textwidth}
+        \begin{block}{Applications}
+            The application on the wild fire can be sperated into 6 domians
+            (the problem domain):
+        \end{block}
+        \begin{itemize}
+            \item fuels characterization, \textbf{fire detection and mapping}
+            \item fire weather and climate change
+            \item fire occurrence and risk
+            \item \textbf{fire behavior prediction}
+            \item fire effects
+            \item \textbf{fire management}
+        \end{itemize}
+
+        \column{0.45\textwidth}
+        \begin{block}{ML Methods}
+            The most often used ML model across all of the problem domains:
+        \end{block}
+        \begin{itemize}
+            \item Traditional Methods:
+                \begin{itemize}
+                    \item random forest (RF)
+                    \item[*] maximum entropy (MaxEnt)\footnotemark[1]
+                    \item artificial neural network (ANN)
+                    \item decision tree (DT)
+                    \item support vector machine (SVM)
+                    \item genetic algorithm (GA)
+                \end{itemize}
+            \item Modern Methods:
+                \begin{itemize}
+                    \item deep learning (including the CNN, LSTM and other object
+                        detection methods)
+                    \item agent-based learning (including the Renforcement
+                        Learning)
+                \end{itemize}
+        \end{itemize}
+    \end{columns}
+    \footnotetext[1]{The item with * should be studied later if needed.}
+\end{frame}
+
+%2
+\begin{frame}
+    \frametitle{\textit{A review of machine learning applications in wildfire
+    science and management} ~~------~~ Main Tasks}
+    \begin{enumerate} 
+        \item fuels characterization, \textbf{fire detection and mapping:}\\
+            \begin{itemize}
+                \item \textbf{Detection (Classification + Regression problem
+                    $\rightarrow$ Object Detection):}
+
+                    Automatically detecting the wildfires as soon as possible,
+                    even it is realtively small, with heat signatures or smoke
+                    in infra-red or optical images, which can extend  spatial
+                    and temporal coverage of the detection.
+
+                \item \textbf{Mapping (Classification):} 
+                    Classify the burned and unburned area to get the perimeter
+            \end{itemize}
+        \item \textbf{fire behavior prediction (Regression )\footnotemark[1]}:
+
+            The papers in this area mainly deal with the larger scale processes
+            and characteristics to predict or estimate the fire spread rates,
+            fire growth, burned area, and fire severity.
+
+        \item \textbf{fire management (Optimization, Regression)}:
+
+            To have the appropriate amount of fire on the land.
+            \begin{itemize}
+                \item Optimize the allocation of the people, watchtower or other
+                    fire-managing elements.
+                \item Estimate the relationship of the fire characteristics and
+                    the wild fire responds and even the social factors.
+            \end{itemize}
+    \end{enumerate}
+    \colorbox{orange}{However, may be we can do more further about these
+    applications!}
+    \footnotetext[1]{not sure.}
+
+\end{frame}
+
+%3
+\begin{frame}
+    \frametitle{\textit{A review of machine learning applications in wildfire
+    science and management} ~~------~~ Proposed Theories and Methods}
+
+    The input data could be images, infra-images, multispectral images and MOIDS
+    hotpot data from the UAVs, manned aircraft, watchtower, and satellite
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{p{0.3\textwidth}p{0.3\textwidth}p{0.3\textwidth}}
+            \hline
+            \textbf{Application Type} & Traditional Methods                    & Modern Methods  \\
+            \hline
+            fire detection            & ANN+infra SVM+video GA+LiDAR ANFIS     & CNN LSTM YOLO Optica-Flow 3D-CNN    \\
+            fire mapping              & RF ANN SVM GPR(GP regression) AdaBoost & DNN    \\
+            fire behavior prediction  & RF BNs KNN GA+physical model MDP       & CNN LSTM    \\
+            fire management           & GA(optimization) BN ANN                & $\backslash$\\
+            \hline
+        \end{tabular}
+        \caption{proposed methods}
+    \end{table}
+    \begin{itemize}
+        \item \textbf{Traditional Methods:} Usually extract the images' feature
+            with the computer vision technology, for example, the
+            color(may under differernt color sapce) , texture,
+            feature descriptors, etc.
+        \item \textbf{Modern Methods:} usually the end-to-end model, use the
+            convolution layers to `extract features`, the features are
+            usually incomprehensible.
+    \item \textbf{Mixed Methods:} Fast-RCNN, Faster-RCNN+feature selecting based on
+            fuzzy logic
+    \end{itemize}
+
+\end{frame}

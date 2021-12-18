@@ -1,0 +1,113 @@
+\section{A Review On Deep Learning In UAV Remote Sensing}
+
+%4
+\begin{frame}
+    \frametitle{\textit{A Review On Deep Learning In UAV Remote Sensing}
+    ~~------~~ Applications}
+    \begin{block}{Main task}
+        A brief review of DL methods and their applications on the UAV-based imagery
+        to solve classification, object detection, and semantic segmentation
+        problems.
+    \end{block}
+    \begin{itemize}
+        \item Environment Mapping
+        \item Urban Mapping
+        \item Agriculture Mapping
+    \end{itemize}
+
+\end{frame}
+
+%1
+\begin{frame}
+    \frametitle{\textit{A Review On Deep Learning In UAV Remote Sensing}
+    ~~------~~ Overview}
+
+    \colorbox{orange}{Highlights:}
+    \begin{itemize}
+        \item UAVs offer flexibility in data collection, they present the
+            dynamic data with the embedded RBG camera, multispectral,
+            hyperspectral, thermal and LiDAR sensors.
+        \item The sensor on the UAVs can generate different altitude and
+            point-of-view data, which contains more features like patterns and
+            textures etc.
+        \item This survey is particularly related to UAV-imagery, \color{red}{
+            while some of the others focus on the DL in remote sensing but not
+            UAV-based imagery.}
+    \end{itemize}
+
+\end{frame}
+
+%2
+\begin{frame}
+    \frametitle{\textit{A Review On Deep Learning In UAV Remote Sensing}
+    ~~------~~ Deep Neural Networks}
+
+    \begin{block}{DNN:}
+        \begin{itemize}
+            \item Models Types;
+            \item Validation metrics: ROC curve, F-score, IoU and other metrics.
+        \end{itemize}
+    \end{block}
+
+    \begin{itemize}
+        \item \textbf{classification}\linebreak
+            labeling the image or the patch according to their classes.
+        \item \textbf{object detection}\linebreak
+            draw a boundary box around the object and labeling them.
+        \item \textbf{semantic and instance segmentation}\linebreak
+            draw the region or structures around the boundary of object,
+            i.e., distinguish the object at the pixel level.
+            \begin{itemize}
+                \item The semantic segmentation can not distinguish multiple
+                    objects of the same category.
+                \item detect objects in pixel-level mask and labeling each
+                    mask into a class label.
+            \end{itemize}
+        \item \textbf{regression}\linebreak
+            In comparison to classification, regression tasks using DL is
+            not often used
+    \end{itemize}
+
+\end{frame}
+
+%3
+\begin{frame}
+    \frametitle{\textit{A Review On Deep Learning In UAV Remote Sensing}
+    ~~------~~ Approaches of DL}
+
+    \begin{block}{Scene-Wise Classification, Object Detection, and Segmentation}
+    \end{block}
+    \begin{itemize}
+        \item \textbf{One-stage detectors:}\linebreak
+            regression-based methods, directly make classification and detect
+            the location of the objects. They tend to have lower accuracy.
+        \item \textbf{Two-stage detectors:}\linebreak
+            region proposal-based methods, usually 2 steps: \linebreak
+            \begin{itemize}
+                \item generate the candidate boundary box(region)
+                \item classify the regions into object classes, refine the
+                    boundary.
+            The widely used algorithm is the strategy proposed with
+            \textbf{Faster-RCNN} and also other methods.
+            \end{itemize}
+    \end{itemize}
+
+\end{frame}
+
+
+%5
+\begin{frame}
+    \frametitle{\textit{A Review On Deep Learning In UAV Remote Sensing}
+    ~~------~~ Problems to be settled}
+
+    \begin{itemize}
+        \item real-time implementation on the UAVs
+        \item The accuracy decreases due to the noise from the hyperspectral or
+            high-dimensional data.
+        \item The difference between the training and testing images.
+        \item domain adoption and transfer learning
+        \item attention based mechanisms ~------~ transformer
+        \item Multi tasks learning
+    \end{itemize}
+
+\end{frame}
